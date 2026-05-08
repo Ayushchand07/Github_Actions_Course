@@ -1,0 +1,21 @@
+name : 06 Passing data between steps
+
+on: 
+    workflow_dispatch: 
+
+jobs:
+    Data_Passing:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Create Data
+              id: sender
+              run: | 
+                echo "name=Ayush" >> $GITHUB_OUTPUT
+
+            - name: Receive data
+              run: |
+                echo "This is name :  ${{steps.sender.outputs.name}}"
+
+
+
