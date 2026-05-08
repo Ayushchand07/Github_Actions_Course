@@ -2,7 +2,7 @@ name : 04 Linked Workflow Part 2
 
 on:
     workflow_run: 
-        workflows: [04 Linked Workflow]
+        workflows: ["04 Linked Workflow"]
         types: 
             - completed
 
