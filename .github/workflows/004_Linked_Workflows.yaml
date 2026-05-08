@@ -1,0 +1,25 @@
+name: 04 Linked_Workflows
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'Username'
+        default: 'Machael'
+        required: true
+        type: string
+      
+      age:
+        description: 'Age'
+        type: number
+        required: true
+
+jobs:
+  echo-username-age:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo Username and Age
+        run: |
+          echo "Username: ${{ inputs.username }}"
+          echo "Age: ${{ inputs.age }}"

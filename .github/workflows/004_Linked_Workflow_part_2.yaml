@@ -1,0 +1,16 @@
+name : 04 Linked Workflow Part 2
+
+on:
+    workflow_run: 
+        workflows: [04 Linked Workflow]
+        types: 
+            - completed
+
+jobs:
+    echo_hi_all:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Print_hi
+              run: |
+                echo "Hello all !!"
