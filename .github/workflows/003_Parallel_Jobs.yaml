@@ -1,0 +1,23 @@
+name: 03 Parallel jobs
+
+on: 
+    workflow_dispatch
+
+jobs:
+    unit_test:
+        runs-on: Ubunto-latest
+
+        steps:
+            - name: unit test step
+              id: "Unit_Test_ID"
+              run: |
+                echo "This is unit test step"
+    
+    integration_test:
+        runs-on: Ubunto-latest
+
+        steps:
+            - name: integration test step
+              id: "Integration_Test_ID"
+              run: |
+                echo "This is integration test step"
